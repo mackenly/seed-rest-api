@@ -1,0 +1,6 @@
+name = "seed_rest_api"
+main = "build/worker/shim.mjs"
+compatibility_date = "2023-02-19"
+
+[build]
+command = "cargo install -q worker-build && worker-build --release"
