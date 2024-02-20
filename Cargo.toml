@@ -12,7 +12,7 @@ crate-type = ["cdylib"]
 
 [dependencies]
 serde = "1.0.188"
-worker = "0.0.15"
+worker = "0.0.18"
 getrandom = { version = "0.2", features = ["js"] }
 rand = "0.8.5"
 
