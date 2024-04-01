@@ -4,9 +4,12 @@
 	"private": true,
 	"scripts": {
 		"deploy": "wrangler deploy",
-		"dev": "wrangler dev --local"
+		"deploy:dry-run": "wrangler deploy --dry-run",
+		"dev": "wrangler dev --local",
+		"test": "node tests/test.mjs"
 	},
 	"devDependencies": {
-		"wrangler": "^3.28.3"
+		"miniflare": "^3.20240329.0",
+		"wrangler": "^3.42.0"
 	}
 }
