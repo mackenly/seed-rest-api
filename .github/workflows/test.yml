@@ -27,7 +27,7 @@ jobs:
       run: npm i
 
     - name: Deploy dry run
-      run: npm deploy:dry-run
+      run: npm run deploy:dry-run
 
     - name: Run tests
-      run: npm test
+      run: npm run test
