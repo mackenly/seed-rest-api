@@ -1,4 +1,4 @@
-use rand::distributions::{Alphanumeric, DistString};
+use rand::distr::{Alphanumeric, SampleString};
 use serde::{Deserialize, Serialize};
 use worker::*;
 
@@ -9,12 +9,12 @@ struct ResponseData {
 }
 
 #[event(fetch)]
-pub async fn main(req: Request, _env: Env, _ctx: worker::Context) -> Result<Response> {
+async fn fetch(req: Request, _env: Env, _ctx: Context) -> Result<Response> {
     if !matches!(req.method(), Method::Get) {
         return Response::error("Method Not Allowed", 405);
     }
 
-    let random_string = Alphanumeric.sample_string(&mut rand::thread_rng(), 32);
+    let random_string = Alphanumeric.sample_string(&mut rand::rng(), 32);
     let data = ResponseData {
         length: random_string.len() as u8,
         random_string,

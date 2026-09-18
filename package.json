@@ -5,11 +5,10 @@
 	"scripts": {
 		"deploy": "wrangler deploy",
 		"deploy:dry-run": "wrangler deploy --dry-run",
-		"dev": "wrangler dev --local",
+		"dev": "wrangler dev",
 		"test": "node tests/test.mjs"
 	},
 	"devDependencies": {
-		"miniflare": "^3.20240329.0",
-		"wrangler": "^4.59.1"
+		"wrangler": "^4.135.0"
 	}
 }

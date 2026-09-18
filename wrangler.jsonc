@@ -1,0 +1,15 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "seed_rest_api",
+	"main": "build/index.js",
+	"compatibility_date": "2026-09-18",
+	"limits": {
+		"cpu_ms": 10
+	},
+	"build": {
+		"command": "cargo install -q \"worker-build@^0.8\" && worker-build --release"
+	},
+	"observability": {
+		"enabled": true
+	}
+}
