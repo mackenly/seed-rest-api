@@ -9,6 +9,6 @@
 		"test": "node tests/test.mjs"
 	},
 	"devDependencies": {
-		"wrangler": "^4.142.0"
+		"wrangler": "^4.155.0"
 	}
 }
